@@ -1,6 +1,6 @@
 import { createHeader } from './header';
 import { screen } from '@testing-library/dom';
-import userEvent from '@testing-library/user-event';
+//import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom'; //nameSpace for jest-dom matchers
 import { vi } from 'vitest';
 
@@ -15,9 +15,9 @@ describe('Given creacreateHeader', () => {
             expect(header).toBeInstanceOf(HTMLElement);
         });
 
-        test('Then has an H1', () => {
-            const element = screen.getByRole('header') as HTMLElement;
-            expect(element).toBe('h1');
+        test('Then be an H1', () => {
+            const element = screen.getByRole('heading') as HTMLElement;
+            expect(element).toContainHTML('Productos');
         });
     });
 });
