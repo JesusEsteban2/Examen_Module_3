@@ -6,7 +6,7 @@ import { vi } from 'vitest';
 
 vi.spyOn(console, 'log');
 
-describe('Given creacreateHeader', () => {
+describe('Given createHeader', () => {
     describe('When has created', () => {
         test('Then be a instance of', async () => {
             const header = createHeader();
